@@ -16,6 +16,13 @@ $f3->set('DEBUG', 3);
 //Define a route with a one parameter
 $f3->route('GET /@type', function($f3, $params) {
     print_r($params);
+    if($params[0] == "/chicken") {
+        echo("<h1>Cluck!</h1>");
+    }
+
+    if($params[0] == "/dog") {
+        echo("<h1>Woof!</h1>");
+    }
 });
 
 //Define a default route
