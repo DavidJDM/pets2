@@ -3,7 +3,7 @@
 //Turn on error reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-
+session_start();
 //Require autoload
 require_once ('vendor/autoload.php');
 
@@ -58,6 +58,7 @@ $f3->route('GET /order', function() {
 
 $f3->route('POST /order2', function() {
     $_SESSION['animal'] = $_POST['animal'];
+
     print_r($_SESSION);
     $view = new View();
     echo $view->render('views/form2.html');
