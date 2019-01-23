@@ -13,6 +13,11 @@ $f3 = Base::instance();
 //Turn of Fat-Free error reporting
 $f3->set('DEBUG', 3);
 
+//Define a route with a one parameter
+$f3->route('GET /@type', function($f3, $params) {
+    print_r($params);
+});
+
 //Define a default route
 $f3->route('GET /', function() {
     echo '<h1>My Pets</h1>';
