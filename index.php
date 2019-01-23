@@ -23,6 +23,20 @@ $f3->route('GET /@type', function($f3, $params) {
     if($params[0] == "/dog") {
         echo("<h1>Woof!</h1>");
     }
+
+    if($params[0] == "/bear") {
+        echo("<h1>Rahhhr!</h1>");
+    }
+
+    if($params[0] == "/cat") {
+        echo("<h1>Meaw!</h1>");
+    }
+
+    if($params[0] == "/lion") {
+        echo("<h1>Rowhr!</h1>");
+    }
+
+
 });
 
 //Define a default route
